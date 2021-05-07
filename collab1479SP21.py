@@ -39,7 +39,7 @@ def main():
     jumpTable['12'] = stub                # Seaman - call to function goes here
     jumpTable['13'] = stub                # Silva - call to function goes here
     jumpTable['14'] = stub                # Simmons - call to function goes here
-    jumpTable['15'] = stub                # Smith, C - call to function goes here
+    jumpTable['15'] = smithFunction       # Smith, C - call to function goes here
     jumpTable['16'] = stub                # Smith, J - call to function goes here
     jumpTable['17'] = stub                # Stout - call to function goes here
     jumpTable['18'] = stub                # Syed - call to function goes here
@@ -65,6 +65,7 @@ def main():
                 print("Have a nice day.")
             else:
                 jumpTable[chrChoice]()
+            if(chrChoice.isdigit() and int(chrChoice) < (len(jumpTable) + 15)):
         else:
             print("Please enter one of the numeric values from the menu.  Thanks")
             print("Press ENTER to continue.")
@@ -167,6 +168,13 @@ def smileyFib(numberOfTimes):
 
     print()
     print()
+    
+#Converts Kilometers per hour to miles per hour
+def smithFunction():
+
+kmh = int(input("Enter km/h: "))
+mph =  0.6214 * kmh
+print ("Speed:", kmh, "KM/H = ", mph, "MPH")
 
 #*****************************************************************
 # Please leave me alone,
